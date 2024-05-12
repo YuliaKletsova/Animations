@@ -52,7 +52,7 @@ export default function Home() {
                 }
             }
         }}>
-            <Tabs defaultActiveKey="1" items={items}/>
+            <Tabs defaultActiveKey="2" items={items}/>
         </ConfigProvider>
      </Flex>  );
   }
