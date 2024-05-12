@@ -2,8 +2,8 @@ import {ConfigProvider, Flex, Tabs, TabsProps} from "antd";
 import {SVGanimation} from "./svg";
 import {FramerMotion} from "./FramerMotion";
 import {ReactSpring} from "./ReactSpring";
-import {ReactMove} from "./ReactMove";
 import {ReactAnime} from "./ReactAnime";
+import {ReactTransitionGroup} from "./ReactTransitionGroup";
 
   
 const items: TabsProps['items'] = [
@@ -24,14 +24,14 @@ const items: TabsProps['items'] = [
     },
     {
         key: '4',
-        label: 'React Move',
-        children: <ReactMove />,
-    },
-    {
-        key: '5',
         label: 'React Anime',
         children: <ReactAnime />,
     },
+    {
+        key: '5',
+        label: 'ReactTransitionGroup',
+        children: <ReactTransitionGroup />
+    }
 ];
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
                 }
             }
         }}>
-            <Tabs defaultActiveKey="2" items={items}/>
+            <Tabs defaultActiveKey="5" items={items}/>
         </ConfigProvider>
      </Flex>  );
   }

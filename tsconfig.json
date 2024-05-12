@@ -15,10 +15,10 @@
     "baseUrl": "./",
     "paths": {
       "~/*": ["./*"],
-      "~components/*" : ["src/components/*"],
-      "~components" : ["src/components"],
+      "~components/*" : ["src/*"],
+      "~components" : ["src"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "node-modules/@types", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

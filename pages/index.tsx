@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import {NextPage} from "next/types";
 
 
-const MainPageComponent = dynamic(() => import('~/src/components'), {
+const MainPageComponent = dynamic(() => import('~/src'), {
     ssr: false,
 });
 
