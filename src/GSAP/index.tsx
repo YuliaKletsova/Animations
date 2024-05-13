@@ -6,8 +6,8 @@ export const GSAP = () => {
     const [mount, setMount] = useState(true);
 
     useEffect(() => {
-        if (mount) setTimeout(() => setMount(false), 5000)
-        else setMount(true)
+        if (mount) setTimeout(() => setMount(false), 7000)
+        else setTimeout(() => setMount(true), 1000)
     })
 
     return (

@@ -8,7 +8,7 @@ export const ContentSwitch = () => {
         let ctx = gsap.context(() => {
             const timeline = gsap.timeline();
             timeline.from('#slider', {
-                xPercent: '-100',
+                xPercent: '-500',
                 duration: 1.3,
                 delay: 0.3,
             }).from(['#title', '#description'], {
@@ -20,7 +20,7 @@ export const ContentSwitch = () => {
                 y: '-=30',
                 stagger: 0.5
             }).to('#slider', {
-                xPercent: '-100',
+                xPercent: '-500',
                 duration: 1.3,
             })
         }, ref)
