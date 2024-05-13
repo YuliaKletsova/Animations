@@ -1,5 +1,5 @@
-import {Flex, Typography} from "antd"
-import {Card} from "./Card"
+import { Flex } from "antd"
+import { Card } from "./Card"
 
 export const ReactTransitionGroup = () => {
     return (

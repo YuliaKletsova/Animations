@@ -1,9 +1,10 @@
-import {ConfigProvider, Flex, Tabs, TabsProps} from "antd";
-import {SVGanimation} from "./svg";
-import {FramerMotion} from "./FramerMotion";
-import {ReactSpring} from "./ReactSpring";
-import {ReactAnime} from "./ReactAnime";
-import {ReactTransitionGroup} from "./ReactTransitionGroup";
+import { ConfigProvider, Flex, Tabs, TabsProps } from "antd";
+import { SVGanimation } from "./svg";
+import { FramerMotion } from "./FramerMotion";
+import { ReactSpring } from "./ReactSpring";
+import { ReactTransitionGroup } from "./ReactTransitionGroup";
+import { GSAP } from "./GSAP";
+import { useRouter } from "next/router";
 
   
 const items: TabsProps['items'] = [
@@ -24,8 +25,8 @@ const items: TabsProps['items'] = [
     },
     {
         key: '4',
-        label: 'React Anime',
-        children: <ReactAnime />,
+        label: 'GSAP',
+        children: <GSAP />,
     },
     {
         key: '5',
@@ -35,6 +36,18 @@ const items: TabsProps['items'] = [
 ];
 
 export default function Home() {
+    const {query, push} = useRouter();
+    const initialTab = query.tab && !Array.isArray(query.tab) ? query.tab : '1'; 
+    const onTabChange: TabsProps['onChange'] = (activeKey) => 
+        push(
+            {
+                pathname: '/',
+                query: { tab: activeKey }
+            }, 
+            undefined,
+            { shallow: true }
+        )
+
     return (
      <Flex style={{width: '100vw', height: '100vh', padding: '100px'}}>
         <ConfigProvider theme={{
@@ -52,7 +65,7 @@ export default function Home() {
                 }
             }
         }}>
-            <Tabs defaultActiveKey="5" items={items}/>
+            <Tabs defaultActiveKey={initialTab} items={items} onChange={onTabChange} />
         </ConfigProvider>
      </Flex>  );
   }

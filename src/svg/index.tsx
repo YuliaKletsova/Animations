@@ -1,5 +1,5 @@
-import {Flex, Typography} from "antd"
-import {Progress, Rectangle} from './svgComponents';
+import { Flex, Typography } from "antd"
+import { Progress, Rectangle } from './svgComponents';
 
 export const SVGanimation = () => {
     return (

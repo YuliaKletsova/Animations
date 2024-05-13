@@ -1,5 +1,5 @@
-import {Flex, Typography} from "antd"
-import {HelloComponent} from "./HelloComponent"
+import { Flex, Typography } from "antd"
+import { HelloComponent } from "./HelloComponent"
 
 export const ReactSpring = () => {
     return (

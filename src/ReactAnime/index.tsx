@@ -1,4 +1,4 @@
-import {Typography} from "antd"
+import { Typography } from "antd"
 
 export const ReactAnime = () => {
     return <Typography.Paragraph>React Anime</Typography.Paragraph>

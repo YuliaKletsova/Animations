@@ -1,10 +1,10 @@
-import {Button, Flex, Typography} from 'antd';
-import {useEffect, useRef, useState} from 'react';
+import { Flex, Typography } from 'antd';
+import { useEffect, useRef, useState } from 'react';
 import { Transition } from 'react-transition-group';
 import './style.module.css'
 
 export const Card = () => {
-    const [toggleOpen, setToggleOpen] = useState(false);
+    const [toggleOpen, setToggleOpen] = useState(true);
     const nodeRef = useRef(null);
     const duration = 3000
 
@@ -24,6 +24,8 @@ export const Card = () => {
     useEffect(() => {
       setTimeout(() => setToggleOpen(!toggleOpen), 3000)
     },[toggleOpen])
+
+    useEffect(() => setToggleOpen(!toggleOpen),[])
 
     return (
         <Flex vertical gap={30}>
